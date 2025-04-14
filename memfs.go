@@ -241,9 +241,9 @@ func (rootFS *FS) Open(name string) (fs.File, error) {
 			if err != nil {
 				return nil, err
 			}
-			newContent, err := rootFS.openHook(name, exitingContent, err)
-			if err != nil {
-				return nil, err
+			newContent, innerErr := rootFS.openHook(name, exitingContent, err)
+			if innerErr != nil {
+				return nil, innerErr
 			}
 			f := child.(*File)
 			f.content = newContent

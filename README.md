@@ -1,5 +1,12 @@
 # memfs: A simple in-memory io/fs.FS filesystem
 
+## Note on fork
+
+This is my fork of "github.com/psanford/memfs".  The canonical location
+is md0.org/memfs.  The github repo will lag behind.
+
+## Original README
+
 memfs is an in-memory implementation of Go's io/fs.FS interface.
 The goal is to make it easy and quick to build an fs.FS filesystem
 when you don't have any complex requirements.
@@ -48,3 +55,7 @@ func main() {
 	fmt.Printf("%s\n", content)
 }
 ```
+
+## License
+
+BSD-3-Clause
